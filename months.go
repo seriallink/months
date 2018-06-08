@@ -36,3 +36,25 @@ func AddMonths(t time.Time, n int) (r time.Time) {
 
 	return
 }
+
+func MonthsBreakdown(t1, t2 time.Time) (dates []time.Time) {
+
+	dates = append(dates,t1)
+	current := t1.Month()
+
+	for t1.Before(t2) {
+
+		t1 = t1.Add(time.Hour * 24)
+		next := t1.Month()
+
+		if next != current {
+			dates = append(dates,t1)
+		}
+
+		current = next
+
+	}
+
+	return dates
+
+}

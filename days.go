@@ -53,3 +53,17 @@ func SubDays(t time.Time, n int) (ret time.Time) {
 	}
 	return
 }
+
+func DaysBreakdown(t1, t2 time.Time) (dates []time.Time) {
+
+	dates = append(dates,t1)
+	count := DaysBetween(t2,t1)
+
+	for i:=0; i<count; i++ {
+		t1 = t1.Add(time.Hour * 24)
+		dates = append(dates,t1)
+	}
+
+	return
+
+}
