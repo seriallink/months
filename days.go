@@ -33,7 +33,7 @@ func Days(t time.Time) int {
 
 // Calculates the difference between two times in days
 func DaysBetween(t1, t2 time.Time) (int) {
-	return Days(t1) - Days(t2)
+	return Days(t2) - Days(t1)
 }
 
 // Adds "n" days to a given time
