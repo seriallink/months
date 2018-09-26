@@ -16,9 +16,9 @@ func Today() (time.Time) {
 	return Trunc(time.Now())
 }
 
-// Returns tomorrow's time by adding one day to the given time
-func Tomorrow(t time.Time) (time.Time) {
-	return AddDays(t, 1)
+// Returns tomorrow's time by adding one day from today
+func Tomorrow() (time.Time) {
+	return AddDays(Today(), 1)
 }
 
 // Returns tomorrow's time by subtracting one day from the given time
