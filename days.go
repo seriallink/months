@@ -21,9 +21,9 @@ func Tomorrow() (time.Time) {
 	return AddDays(Today(), 1)
 }
 
-// Returns tomorrow's time by subtracting one day from the given time
-func Yesterday(t time.Time) (time.Time) {
-	return SubDays(t, 1)
+// Returns tomorrow's time by subtracting one day from today
+func Yesterday() (time.Time) {
+	return SubDays(Today(), 1)
 }
 
 func Days(t time.Time) int {
